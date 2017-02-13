@@ -109,14 +109,26 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AutoshopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Autoshop\AutoshopGenerator.cs" />
+    <Compile Include="Models\Autoshop\AutoshopManager.cs" />
+    <Compile Include="Models\Autoshop\BodyType.cs" />
+    <Compile Include="Models\Autoshop\Car.cs" />
+    <Compile Include="Models\Common\Keygen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Autoshop\Index.cshtml" />
+    <Content Include="Views\Autoshop\Car.cshtml" />
+    <Content Include="Views\Autoshop\CarType\Sedan.cshtml" />
+    <Content Include="Views\Autoshop\CarType\Offroad.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,8 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

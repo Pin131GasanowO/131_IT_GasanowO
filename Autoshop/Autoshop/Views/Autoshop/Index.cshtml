@@ -1,0 +1,14 @@
+﻿@using Autoshop.Models.Autoshop
+@model IEnumerable<Car>
+
+@{
+    ViewBag.Title = "Автомагазин";
+}
+
+@foreach (Car c in Model)
+{
+
+    <div class="car-wrap">
+        @Html.Partial("CarType/" + @c.GetType().Name, c)
+    </div>
+}

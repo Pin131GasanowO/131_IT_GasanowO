@@ -1,0 +1,22 @@
+﻿@using Autoshop.Models.Autoshop
+@model Sedan
+
+<div class="car">
+    <h2 class="car-label">@Model.Label (Sedan)</h2>
+    <div>@Model.GetType().Name</div>
+    <div class="price"><span class="item-lable">Цена:</span> @Model.Price руб.</div>
+    <div class="balance"><span class="item-lable">Остаток:</span> @Model.Balance</div>
+    @if (Model.WarrantyPeriod != null)
+    {
+        <div class="warranty-period"><span class="item-lable">Гарантийное обслуживание до:</span> @Model.WarrantyPeriod</div>
+    }
+    <div class="max-weight"><span class="item-lable">Максимальный допустимый вес:</span> @Model.MaxWeight</div>
+    <div class="engine-size"><span class="item-lable">Объем двигателя:</span> @Model.EngineSize</div>
+    @if (Model.Color != null)
+    {
+        <div class="color"><span class="item-lable">Цвет:</span> @Model.Color</div>
+    }
+    <div class="more-link-wrap">
+        <a href="@Url.Action("car", "autoshop", new { id = Model.Id })" class="more-link">Подробнее...</a>
+    </div>
+</div>
