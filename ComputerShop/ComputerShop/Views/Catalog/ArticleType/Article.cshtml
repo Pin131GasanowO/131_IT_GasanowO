@@ -1,0 +1,12 @@
+﻿@using ComputerShop.Models.Catalog
+@model Article
+
+<div class="article">
+    <h2 class="article-label">@Model.Label</h2>
+    <div>@Model.GetType().Name</div>
+    <div class="price"><span class="item-lable">Цена:</span> @Model.Price руб.</div>
+    <div class="balance"><span class="item-lable">Остаток:</span> @Model.Balance</div>
+    <div class="more-link-wrap">
+        <a href="@Url.Action("article", "catalog", new { id = Model.Id })" class="more-link">Подробнее...</a>
+    </div>
+</div>

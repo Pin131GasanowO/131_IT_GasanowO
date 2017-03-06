@@ -1,0 +1,29 @@
+﻿@using ComputerShop.Models.Catalog
+@model Cement
+
+<div class="article">
+    <h2 class="article-label">@Model.Label (Meat)</h2>
+    <div>@Model.GetType().Name</div>
+    <div class="price"><span class="item-lable">Цена:</span> @Model.Price руб.</div>
+    <div class="balance"><span class="item-lable">Остаток:</span> @Model.Balance</div>
+    @if (Model.ShelfLife != null)
+    {
+        <div class="shelf-life"><span class="item-lable">Годно до:</span> @Model.ShelfLife</div>
+    }
+    <div class="weight"><span class="item-lable">Вес:</span> @Model.Weight</div>
+    @if (Model.Animal != null)
+    {
+        <div class="nitrates"><span class="item-lable">Животное:</span> @Model.Animal</div>
+    }
+    @if (Model.Part != null)
+    {
+        <div class="nitrates"><span class="item-lable">Часть:</span> @Model.Part</div>
+    }
+    @if (Model.Variety != null)
+    {
+        <div class="variety"><span class="item-lable">Сорт:</span> @Model.Variety</div>
+    }
+    <div class="more-link-wrap">
+        <a href="@Url.Action("article", "catalog", new { id = Model.Id })" class="more-link">Подробнее...</a>
+    </div>
+</div>
