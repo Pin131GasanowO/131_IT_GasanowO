@@ -1,0 +1,36 @@
+﻿@* Подключаем пространство имен предметной области, чтобы сократить название используемых типов *@
+@using HardwareStore.Models.Catalog
+
+@*
+    Устанавливаем тип модели представления.
+    Не забываем, что деректива model пишеться с маленькой буквы.
+    Model с большой - это свойство, где храниться само значение модели
+*@
+@model IEnumerable<Product>
+
+@* Проверяем, еслть ли в модели значение (не null) и есть ли в перечислении объекты *@
+@if (Model != null && Model.Count() > 0)
+{
+    // Перебираем все объекты перечисления
+    <div class="products-list clearfix">
+        @foreach (Product product in Model)
+        {
+            <div class="product-wrap">
+                <div class="product">
+                    <div class="label">@product.Label</div>
+                    <div class="price"><strong class="value">@product.Price</strong> <sub>Р</sub></div>
+                    <div class="balance">Остаток: <strong class="value">@product.Balance</strong></div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    // Отображаем сообщение, в случае, если товары не найдены
+    <div class="products-list-empty">
+        <div class="message">По заданным критериям товары не найдены.</div>
+    </div>
+}
+
+

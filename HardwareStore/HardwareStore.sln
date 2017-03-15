@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoShop", "AutoShop\AutoShop.csproj", "{9C88307F-6AD0-4C15-9BE3-46DED513AE81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareStore", "HardwareStore\HardwareStore.csproj", "{C6329111-CB3B-4DED-B797-DC76C5C3EB76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C88307F-6AD0-4C15-9BE3-46DED513AE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C88307F-6AD0-4C15-9BE3-46DED513AE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C88307F-6AD0-4C15-9BE3-46DED513AE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C88307F-6AD0-4C15-9BE3-46DED513AE81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6329111-CB3B-4DED-B797-DC76C5C3EB76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6329111-CB3B-4DED-B797-DC76C5C3EB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6329111-CB3B-4DED-B797-DC76C5C3EB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6329111-CB3B-4DED-B797-DC76C5C3EB76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
