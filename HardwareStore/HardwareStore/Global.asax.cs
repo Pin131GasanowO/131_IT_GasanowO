@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using HardwareStore.Models.Catalog;
+using HardwareStore.Models.Catalog.SimpleGenerator;
 
 namespace HardwareStore
 {
@@ -34,14 +35,57 @@ namespace HardwareStore
             generator.AddRule(new EnumerableRule()
             {
                 PriceStep = 100,
-                BaseName = "Cement",
+                BaseName = "Цемент",
                 Values = new string[][] { 
                     new string[] {"40-M", "45-M", "50-M"},
-                    new string[] {"Быстро застывающий", "Долго застывающий"},
+                    new string[] {"Влагостойкий", "Термостойкий"},
                     new string[] {"С примесью кремня", "С примесью кварца"},
                 }
             });
 
+            generator.AddRule(new EnumerableRule()
+            {
+                PriceStep = 100,
+                BaseName = "Гипс",
+                Values = new string[][] { 
+                    new string[] {"Волокнистый", "Зернистый"},
+                    new string[] {"Акриловый", "Высокопрочный", "Полимерный"},
+                    new string[] {"Строительный", "Скульптурный"},
+                }
+            });
+
+            generator.AddRule(new EnumerableRule()
+            {
+                PriceStep = 100,
+                BaseName = "Гвозди",
+                Values = new string[][] { 
+                    new string[] {"100", "150", "200"},
+                    new string[] {"Кровельные", "Стандарт"},
+                    new string[] {"Обычная шляпа", "Декоративная шляпа"},
+                }
+            });
+
+            generator.AddRule(new EnumerableRule()
+            {
+                PriceStep = 100,
+                BaseName = "Доска",
+                Values = new string[][] { 
+                    new string[] {"Обрезная", "Односторонне-обрезная", "Необрезная"},
+                    new string[] {"Дощатый горбыль", "Горбыль", "Дощатый обапол", "Обапол", "Горбыльный обапол"},
+                    new string[] {"Строганая", "Двухсторонне строганая", "Односторонне строганая", "Строганая"},
+                }
+            });
+
+            generator.AddRule(new EnumerableRule()
+            {
+                PriceStep = 100,
+                BaseName = "Арматура",
+                Values = new string[][] { 
+                    new string[] {"Стержневая", "Проволочная", "Каркасная сетка"},
+                    new string[] {"Свариваемея", "Стойкая к корозийному растрескиванию", "Несвариваемая", "Не стойкая к корозийному растрескиванию"},
+                    new string[] {"Кольцевой профиль", "Серповидный профиль", "Смешанный профиль", "Гладкая"},
+                }
+            });
             // Генерируем 100 записей
             generator.Process(6);
         }
